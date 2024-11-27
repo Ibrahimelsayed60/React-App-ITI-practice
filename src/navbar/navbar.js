@@ -4,12 +4,36 @@ export default class Navbar extends React.Component{
 
     constructor()
     {
-        super()
+        super();
+        console.log("From Constructor");
+        this.state = {
+            name:"Ibrahim",
+            title:"Developer"
+        };
+    }
+
+    componentDidMount()
+    {
+        console.log("From ComponentDidMount");
+    }
+
+    componentDidUpdate()
+    {
+        console.log("From componentDidUpdate");
+    }
+
+    componentWillUnmount()
+    {
+
     }
 
     render()
     {
-        return (<h1>This is navbar</h1>);
+        console.log("From Render");
+        return <>
+                    <h1>My name is {this.state.name}</h1>
+                    
+                </>;
     }
 
 }
