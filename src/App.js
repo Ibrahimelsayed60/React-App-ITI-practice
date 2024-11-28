@@ -1,11 +1,14 @@
 import logo from './logo.svg';
-import Navbar from './navbar/navbar';
+import Header from './navbar/navbar';
+import './App.css';
+import Users from './users/Users';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello From App</h1>
-      <Navbar/>
+      <h1 className='myH1'>Hello From App</h1>
+      <Header/>
+      <Users/>
     </div>
   );
 }
