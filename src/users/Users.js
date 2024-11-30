@@ -6,6 +6,7 @@ export default class Users extends React.Component{
     {
         super();
         this.state = {
+            isAuth:true,
             users:[
                 {name:"hend", age:25, isAdmin:true},
                 {name:"ali", age:22, isAdmin:true},
@@ -20,12 +21,12 @@ export default class Users extends React.Component{
         return ( 
             <>
                 <ul>
-                    {this.state.users.map((user, index)=>{
+                    {(this.state.isAuth)? this.state.users.map((user, index)=>{
                         if(user.isAdmin)
                         {
-                            return <li> {user.name}</li>
+                            return <li key={index}> {user.name}</li>
                         }
-                    })
+                    }): <h1>Please Login First</h1>
                     }
                 </ul>
             </>
